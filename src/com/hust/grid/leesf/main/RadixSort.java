@@ -39,6 +39,11 @@ public class RadixSort {
                 int subKey = (tmp[m] / rate) % radix;
                 data[--buckets[subKey]] = tmp[m];
             }
+
+            for (int k = 0; k < data.length; k++) {
+                System.out.print(data[k] + " ");
+            }
+            System.out.println();
             rate *= radix;
         }
     }
